@@ -8,8 +8,12 @@ Note: this problem does not require the "compounding interest" formula from the 
 
 """
 
-### Your code here ###
+#Make varibles for the information listed
+in_state_tuition = 30792
+out_of_state_tuition = 47882
 
-in_state_gift = 0
+in_state_gift = in_state_tuition / 0.05
+print("In State Gift = " + str(in_state_gift))
 
-out_state_gift = 0
+out_state_gift = out_of_state_tuition / 0.05
+print("Out Of State Gift = " + str(out_state_gift))

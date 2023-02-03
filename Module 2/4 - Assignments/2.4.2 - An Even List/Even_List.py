@@ -20,9 +20,25 @@ print("Your list is: ", even_list)
 YOUR CODE BEGINS BELOW HERE. FILL IN THE MISSING OPERATIONS / CODE
 """
 
+#find the length of the list
+length = len(even_list)
+print("The length of the list is " + str(length))
 
-# this is the final result. Modify this line, and the empty lines above, to solve the assignment
-middle_average = None
+#find the middle number
+first_middle = length//2
+print("The first middle number is " +str(first_middle))
+
+#find the middle number + 1
+second_middle = first_middle - 1
+print("The second middle number is " + str(second_middle))
+
+#finding the numbers in the list and giving tham names
+first = even_list[first_middle]
+second = even_list[second_middle]
+
+#adding the two middle numbers from the list up
+#dividing them by 2 to find the median
+middle_average = (first + second)/2
 
 # the average of middle elements is
-print("The average is: ", middle_average)
+print("The average of the middle numbers are: " + str(middle_average))
