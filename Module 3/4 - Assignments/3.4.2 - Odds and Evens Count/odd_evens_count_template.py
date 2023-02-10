@@ -25,7 +25,20 @@ upper_bound = 1000
 nums = generate_random_int_list(max_length, upper_bound)
 
 # create two variables to hold the final answers
-num_evens = None
-num_odds = None
+num_evens = []
+num_odds = []
 
 ### YOUR CODE BEGINS HERE ###
+#Print out the random list
+print("The Random List is: " + str(nums))
+#The final answer should be a list of even of numbers and odd numbers
+#num_evens = None
+#number_odds = None
+for number in nums:
+    if number % 2 == 1:
+        num_odds.append(number)
+    elif number % 2 == 0:
+        num_evens.append(number)
+
+print("num_odd: " + str(num_odds))
+print("num_even: " + str(num_evens))
