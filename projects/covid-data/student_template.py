@@ -65,27 +65,62 @@ def parse_nyt_data(file_path=''):
 
     return covid_data
 
+h_cases = 0
+r_cases = 0
 
 if __name__ == "__main__":
     # load covid data as list of CovidRecord objects
     data = parse_nyt_data('us-counties.csv')
-
-    # each element in list data is a CovidRecord object. Each of which contains
-    # date, county, state, fips, cases, and deaths
-
-    # for example, we can print out the data for the first point in the US counties file
-    point = data[0]
-
-    print("Data: ", point.date, " County: ", point.county, " State: ", point.state,
-          " FIPS: ", point.fips, " Cases: ", point.cases, " Deaths: ", point.death)
-
     # write code to address the following question:
     # When was the first positive COVID case in Rockingham County? When was the first in Harrisonburg?
+    for point in data:
+        if point.county == "Harrisonburg city" and point.cases >= h_cases:
+            num = point.cases
+            date = point.date
+            break
+    for point in data:
+        if point.county == "Rockingham" and point.cases >= r_cases:
+            r_num = point.cases
+            r_date = point.date
+            break
+print("The first case in Harrisonburg was on: " + str(date) + " with " + str(num) + " case!!")
+print("The first case in Rockingham was on: " + str(r_date) + " with " + str(r_num) + " case!!")
 
+old_cases = 0
+curr_case = 0
+curr_date = ""
+if __name__ == "__main__":
+    # load covid data as list of CovidRecord objects
+    data = parse_nyt_data('us-counties.csv')
     # write code to address the following question:
     # What day was the greatest number of new daily cases recorded in Harrisonburg? When was the greatest day in Rockingham County?
+    for point in data:
+        if point.county == "Harrisonburg city":
+            great = point.cases - old_cases
+            old_cases = point.cases
+            if curr_case < great:
+                curr_date = point.date
+                curr_case = great
+        continue
+    print("The greatest number of daily cases in Harrisonburg was on " + str(curr_date) + " with " + str(curr_case) + " total cases!!")
 
+old_cases = 0
+curr_case = 0
+curr_date = ""
+if __name__ == "__main__":
+    # load covid data as list of CovidRecord objects
+    data = parse_nyt_data('us-counties.csv')
     # write code to address the following question:
-    # What was the worst seven day period in either the city and county for new COVID cases? This is the 7-day period where the number of new cases was maximal.
+    # What day was the greatest number of new daily cases recorded in Harrisonburg? When was the greatest day in Rockingham County?
+    for point in data:
+        if point.county == "Rockingham":
+            great = point.cases - old_cases
+            old_cases = point.cases
+            if curr_case < great:
+                curr_date = point.date
+                curr_case = great
+        continue
+    print("The greatest number of daily cases in Rockingham was on " + str(curr_date) + " with " + str(curr_case) + " total cases!!")
+
 
 

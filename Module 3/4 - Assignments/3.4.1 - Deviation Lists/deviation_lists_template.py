@@ -10,7 +10,6 @@ Dr. Forsyth's Code. Do Not Modify.
 # bring in randomness because we need it in our lives
 import random
 import numpy as np
-import numpy
 
 # randomly sample a distribution between 20 and 100
 random_length = int(random.uniform(20, 100))
@@ -34,24 +33,27 @@ random_list_B = random.sample(range(100), random_length)
 #import math function into interface
 
 #Print both of the list so that you can the contents of the list
-print("Print The Contents of Random List One" + str(random_list_A))
-print("Print The Contents of Random List Two" + str(random_list_B))
+##print("Print The Contents of Random List One" + str(random_list_A))
+##print("Print The Contents of Random List Two" + str(random_list_B))
 
 #take the starndard deviation of both of the list
 Standard_deviation_list_A = np.std(random_list_A)
 Standard_deviation_list_B = np.std(random_list_B)
 
 #Print the standard deviation of both of the list
-print("The Standard Deviation of List A is: " + str(Standard_deviation_list_A))
-print("The Standard Deviation of List B is: " + str(Standard_deviation_list_B))
+print(Standard_deviation_list_A)
+print(Standard_deviation_list_B)
 
 #Find the greater standard deviation value
 #Write a statement to see if A is larger than B
 if Standard_deviation_list_A >= Standard_deviation_list_B:
-    print("The Longest List is A")
+    longest_list_is = random_list_A
+    print(longest_list_is)
     #Write a statement to see if B is bigger than A
 else:
-    print("The Longest List is B")
+    longest_list_is = random_list_B
+    print(longest_list_is)
+
 
 
 

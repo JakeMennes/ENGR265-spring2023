@@ -5,7 +5,7 @@
 iterations = 1
 
 while iterations <= 5:
-    print("This has looped " + str(iterations) + " times.")
+    # print("This has looped " + str(iterations) + " times.")
     iterations += 1
 
 # Notice how after iterations got above 5 it stopped?
@@ -23,9 +23,9 @@ exponential_growth = 1
 while True:
     exponential_growth *= 2
     if exponential_growth > 200:
-        # print(str(exponential_growth) + " is too Big!!! Stopping!!!")
+        print(str(exponential_growth) + " is too Big!!! Stopping!!!")
         break
-    # print(exponential_growth)
+    print(exponential_growth)
 
 end_line = -1
 

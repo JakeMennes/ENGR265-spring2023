@@ -8,9 +8,9 @@
 list_one = [12, 13, 5, 7, 4, 28, 42, 67]
 
 for number in list_one:
-    print(number)
+    # print(number)
     if number == 4:
-        print("Found a 4, stopping.")
+        # print("Found a 4, stopping.")
         break
 
 # Notice how as soon as the 4 was found, the loop stopped?
@@ -24,7 +24,7 @@ num_one = 1
 for iteration in range(10):
     num_one *= 2
     if num_one > 24:
-        # print(str(num_one) + " is greater than 24!")
+        print(str(num_one) + " is greater than 24!")
         continue
 
 # You can also use continue and break in the same loop!
@@ -40,13 +40,13 @@ num_two = 2
 for items in list_two:
     new_num = items + num_two
     if new_num > 20:
-        # print(str(new_num) + " is too big, stopping.")
+        print(str(new_num) + " is too big, stopping.")
         break
     elif new_num > 10:
-        # print(str(new_num) + " is greater than 10!")
+        print(str(new_num) + " is greater than 10!")
         continue
     else:
-        # print(str(new_num) + " is pretty small.")
+        print(str(new_num) + " is pretty small.")
         continue
 
 end_line = -1

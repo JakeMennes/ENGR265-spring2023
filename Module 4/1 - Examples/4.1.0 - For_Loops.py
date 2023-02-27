@@ -11,7 +11,7 @@ list_one = [1, 2, 3, 4, 5]
 
 for number in list_one:
     dummy = -1
-    print(number)
+    ## print(number)
 
 # Notice how each number was printed in a new line? That shows
 # that the operation happens once every "cycle" the program runs.
@@ -24,7 +24,7 @@ for number in list_one:
 
 for iteration in range(5):
     dummy = -1
-    # print(iteration)
+    #print(iteration)
 
 # Another common application for a for loop is to use the length of a list
 # as the amount of times the loop runs. Same as before, comment out the
@@ -35,7 +35,7 @@ list_two_looped = []
 
 for number in range(len(list_two)):
     list_two_looped.append(list_two[number] - 5)
-    # print(list_two_looped)
+    print(list_two_looped)
 
 # As you can see, the "number" variable was used to represent the index of
 # list_two, to be added to the previously empty list_two_looped! Notice how

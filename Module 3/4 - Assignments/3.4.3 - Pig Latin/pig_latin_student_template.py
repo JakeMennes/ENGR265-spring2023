@@ -56,11 +56,11 @@ for word in words:
         pig_latin.append(pig_word)
 
 # a new sentence in which you will re-assemble each of the modified words
-new_sentence = " "
+new_sentence = ""
 
 # re-assemble list of words into string
 for w in pig_latin:
     new_sentence += w + ' '
 
 # print out the "pig-latin" sentence
-print("The pig-latin version is: ", new_sentence)
+print("The pig-latin version is:", new_sentence)

@@ -23,9 +23,15 @@ vector_b = generate_random_int_list(fixed_length, maximum_value)
 """
 Step 2: Iterate through the vector(s) and calculate the dot product
 """
+Dp = 0
+for i in range(len(vector_a)):
+    times = vector_a[i] * vector_b[i]
+    Dp += times
+    continue
+
 
 # store your result here. Do not change the name
-dot_product = 0
+dot_product = Dp
 
 ### Your code here
 

@@ -7,16 +7,16 @@ mu = 0
 std = 1
 
 # Step 1: Set the number of samples you wish to take. This value is selected by you.
-num_samples = 10
+num_samples = 10000000
 
 # Step 2: use normal to generate distribution samples
-samples = None #edit this line
+samples = np.random.normal(mu, std, num_samples)
 
 # Step 3: use mean() to determine the average of those samples
-measured_mean = -1 #edit this line
+measured_mean = np.mean(samples)
 
 # Step 4: use std() to determine the standard deviation of samples
-measured_deviation = -1 #edit this line
+measured_deviation = np.std(samples)
 
 # check if sufficient samples were taken. Do not modify below this line
 print("mu=", measured_mean, "stdev=", measured_deviation)
