@@ -14,3 +14,17 @@ Compare your results against that dataset and then upload your final solution to
 
 Additional details can be found in [Exploring Amateur Performance in Athletic Tests
 Using Wearable Sensors](https://www.jasonforsyth.net/pdf/mitchell-sieds-camera-ready.pdf)
+
+**7.4.2 - Tensile Strength Testing**
+
+Complete several templates to implement various tensile testing methods. Each template should be completed in order as they build upon one another.
+
+A: Complete the template to calculate stress from load/force and cross-section area
+
+B: Copy your solution from Step 1 and then determine ultimate stress and strain
+
+C: Copy your solution from Step 2 and calculate the elastic modulus
+
+D: Determine Yield Strength in the Step 3 module
+
+E: Submit the full template to Gradescope.

@@ -1,0 +1,19 @@
+This data is from the H user from the IRB dataset. This participant had the lowest standard deviation in measurements across trials.
+
+Trial | Landing 1 | Take Off | Landing 2
+----------------------------------------
+1 | 2820 | 3242 | 3553
+
+
+
+User            TC      TF      FP RSI          Accel RSI
+H_trial_1	    0.422	0.311	0.2810524319	0.3101036707
+H_trial_2		0.508	0.317	0.2425681816	0.2420916233
+H_trial_3		0.495	0.319	0.25208975	    0.2831057669
+H_trial_4		0.541	0.308	0.2150221442	0.2124500666
+H_trial_5		0.5	    0.32	0.251136	    0.2741484602
+H_trial_6		0.47	0.324	0.2738868511	0.2704022051
+H_trial_7		0.502	0.334	0.2725010857	0.2582952128
+H_trial_8		0.464	0.327	0.2825898411	0.3035428266
+H_trial_9		0.477	0.327	0.2748882311	0.3058147228
+H_trial_10		0.467	0.322	0.272253758	    0.2705159681
