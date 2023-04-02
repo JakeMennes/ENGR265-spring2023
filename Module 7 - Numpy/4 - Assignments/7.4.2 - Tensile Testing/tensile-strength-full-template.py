@@ -138,6 +138,32 @@ def calculate_elastic_modulus(strain, stress):
 
     return linear_index, slope, intercept
 
+def calculate_percent_offset(slope, strain, stress):
+    """
+    Determine the 0.2% Offset Yield by identifying the intercept with the stress curve and a parallel line
+
+    :param slope: Slope of the offset line. This should be the elastic modulus
+    :param strain: An array of Strain data (MPa)
+    :param stress: An array of Stress data
+    :return:
+    offset_line: the y-values for the 0.2% offset line
+    intercept_index: The index where the offset line and the strain line intersect
+    """
+    # set the desired offset for the line
+    offset = 0.002
+
+    # calculate the offset line: y=m(x-0.002) + 0
+    offset_line = None
+
+    # measure distance from all points on graph to this line. Consider using the
+    # abs() method to ensure values are positive
+    distance = None
+
+    # use argmin to find the index where the distance is minimal
+    intercept_index = -1
+
+    return offset_line, intercept_index
+
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
@@ -224,5 +250,36 @@ if __name__ == "__main__":
     plt.xlabel('Strain (%)')
     plt.ylabel('Stress (MPa)')
     plt.title('Linear Region for Sample ' + sample_name + ' with best fit')
+
+    ### Step 4: calculate 0.2% yield strength ###
+    offset_line, intercept_index = calculate_percent_offset(slope, strain, stress)
+
+    if offset_line is None or intercept_index == -1:
+        print("Calculate Percent Offset Returned None or -1. Did you return the correct values?")
+        sys.exit(-1)
+
+    # print out the results
+    print("The 0.2% Offset Yield is ", stress[intercept_index], " MPa")
+
+    # create line parallel to linear region and find intersection with overall curve
+    plt.scatter(strain, stress, label="Stress - Strain")
+    plt.xlabel('Strain (mm/mm)')
+    plt.ylabel('Stress (MPa)')
+    plt.title('Stress-Strain Curve for Sample ' + sample_name + " with 0.2% Yield")
+
+    # plot yield line
+    plt.plot(strain, offset_line, label="0.2% Offset Yield")
+
+    # indicate point where yield intersects
+    plt.plot(strain[intercept_index], stress[intercept_index], marker='v', label="Yield Strength")
+
+    # since this will go on forever, constrain the axis
+    plt.xlim([-.001, max(strain)])
+    plt.ylim([0, 1.1 * max(stress)])
+    plt.legend()
+    plt.show()
+
+    print("Done!")
+
 
 
