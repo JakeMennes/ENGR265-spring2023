@@ -27,7 +27,7 @@ print("The length of the list is " + str(list_length))
 middle_index = list_length//2
 
 # use [] to access the middle element. Set it equal to middle_element
-#modify this line to perform the correct operation
+# modify this line to perform the correct operation
 middle_element = odd_list[middle_index]
 
 # print out the middle_element

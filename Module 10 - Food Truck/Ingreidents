@@ -1,0 +1,51 @@
+Ingredients, Parcel_Size, Cost_Parcel, Cost_Per_Oz
+Wrap, 96, 44.60, 0.47
+Chicken, 48, 17.79, 0.37
+Bacon, 80, 42.99, 0.54
+Shredded_Cheese, 32, 9.59, 0.30
+Fries, 80, 51.99, 0.65
+Cheese_Sauce, 428, 69.01, 0.16
+Funnel_Batter, 80, 50.47, 0.63
+Waffle_Batter, 480, 59.59, 0.13
+Oreo, 720, 64.99, 0.09
+Marinara, 120, 40.58, 0.34
+Sticks, 40, 10.58, 0.26
+
+## Cost per Oz of ingredients
+wrap_per_oz = 0.47
+chicken_per_oz = 0.37
+bacon_per_oz = 0.54
+shredded_per_oz = 0.38
+fries_per_oz = 0.65
+cheese_sauce_per_oz = 0.16
+funnel_batter_per_oz = 0.63
+waffle_batter_per_oz = 0.13
+oreo_per_oz = 0.09
+marinara_per_oz = 0.34
+sticks_per_oz = 0.26
+
+## Popularity as a decimal
+LQP = .12
+CQP = .11
+LBP = .11
+MSP = .16
+CTP = .15
+LFP = .13
+FCP = .9
+WP = .6
+FOP = .7
+
+## Price of each menu thing
+LQ_price = 7
+CQ_price = 5
+LB_price = 10
+MS_price = 4
+CT_price = 5
+LF_price = 7
+FC_price = 4
+W_price = 4
+FO_price = 4
+
+## Total amount of thing sold
+Total_Amount_Sold = 500
+

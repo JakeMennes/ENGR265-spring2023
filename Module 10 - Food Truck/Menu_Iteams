@@ -1,0 +1,10 @@
+Menu_Iteams, Ingredients
+Loaded_Quesadilla, Wrap, 1, Chicken, 3, Bacon, 2, Shredded_Cheese, 3,
+Cheese_Quesadilla, Wrap, 1, Shredded_Cheese, 4,
+Burrito_Loaded, Wrap, 1, Chicken, 4, Shredded_Cheese, 3, Fries, 3, Cheese_Sauce, 2, Bacon, 2,
+Mozzarella_Sticks, Sticks, 5, Marinara, 2,
+Chicken_Tender, Chicken, 6,
+Loaded_Fries, Fries, 5, Cheese_Sauce, 3, Bacon, 2,
+Funnel_Cake, Funnel_Batter, 3,
+Waffle, Waffle_Batter, 6,
+Fried_Oreo, Oreo, 3, Waffle_Batter, 1,

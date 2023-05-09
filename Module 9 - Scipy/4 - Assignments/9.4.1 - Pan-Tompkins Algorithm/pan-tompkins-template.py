@@ -1,6 +1,7 @@
 import numpy as np
-from scipy.signal import find_peaks, butter
-
+from scipy.signal import find_peaks,butter
+from ekg_testbench import EKGTestBench
+from scipy.signal import lfilter
 from ekg_testbench import EKGTestBench
 
 
@@ -12,39 +13,41 @@ def main(filepath):
     path = filepath
 
     # load data in matrix from CSV file; skip first two rows
-    ## your code here
+    EKG_data = np.loadtxt(filepath, skiprows=2, delimiter=",")
 
     # save each vector as own variable
-    ## your code here
+    time = EKG_data[:, 0]
+    v5 = EKG_data[:, 1]
+    v2 = EKG_data[:, 2]
 
     # identify one column to process. Call that column signal
-
-    signal = -1 ## your code here
-
-    # pass data through LOW PASS FILTER (OPTIONAL)
-    ## your code here
-
-    # pass data through HIGH PASS FILTER (OPTIONAL) to create BAND PASS result
-    ## your code here
+    sig = v2
 
     # pass data through differentiator
-    ## your code here
+    length = (500)/len(sig)
+    pause = (50)
+    b, a = butter(3, (length/(.5*pause)), btype='high', analog=False)
+    sig = lfilter(b, a, sig)
+
+    diff = np.diff(sig)
 
     # pass data through square function
-    ## your code here
+    squared = np.power(diff, 2)
 
     # pass through moving average window
-    ## your code here
+    array_ones = np.ones(12)
+    moving_avg = np.convolve(squared, array_ones)
+    moving_avg = (moving_avg)/(len(array_ones))
 
-    # use find_peaks to identify peaks within averaged/filtered data
-    # save the peaks result and return as part of testbench result
 
-    ## your code here peaks,_ = find_peaks(....)
+    # Use find_peaks to identify peaks within averaged/filtered data
+    # Save the peaks result and return as part of testbench result
+    # Your code here peaks,_ = find_peaks(....)
 
-    peaks = None
+    peaks, _ = find_peaks(moving_avg,height = length, distance = pause +(100))
 
     # do not modify this line
-    return signal, peaks
+    return sig, peaks
 
 
 # when running this file directly, this will execute first

@@ -23,8 +23,6 @@ print("Add 6 to List " +str(new_list))
 new_list.insert(0, 0)
 print("Add 0 to Front of List " + str(new_list))
 
-
-
 # Here is the another list:
 slicing_list = ["Luke", "Leia", "Han", "Vader", "R2D2"]
 
